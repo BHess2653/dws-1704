@@ -17,6 +17,8 @@ class Main extends React.Component {
     return (
       <div>
          <h3>Pokemon: {this.state.name}</h3>
+         <p>ID: {this.state.id}</p>
+         <p>Height: {this.state.height}, Weight: {this.state.weight}</p>
       </div>
     );
   }
