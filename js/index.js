@@ -2,6 +2,15 @@ angular.module('pokeApp', []);
 
 angular.module('pokeApp').controller('pokeController', function($scope, pokeService) {
 
+  $scope.page = 0;
+
+  $scope.getPokemon = function() {
+      pokeService.getPokemon($scope.page).then(function(results) {
+          $scope.pokemon = results;
+          console.dir($scope.pokemon);
+      });
+  };
+
   $scope.getPokemon();
 
   $scope.getMore = function(url) {
@@ -11,11 +20,32 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
     });
   };
 
+  $scope.advancePage = function() {
+      $scope.page++;
+      $scope.getPokemon();
+  }
+
+  $scope.retreatPage = function() {
+      if ($scope.page > 0) {
+          $scope.page--;
+          $scope.getPokemon();
+      }
+  }
+
 });
 
 angular.module('pokeApp').service('pokeService', function($http) {
 
   var pokeUrl = 'http://pokeapi.co/api/v2/';
+
+  this.getPokemon = function(page) {
+      return $http({
+      method: 'GET',
+      url: pokeUrl + 'pokemon/?limit=20&offset=' + (page * 20)
+      }).then(function(results) {
+          return results.data.results;
+      });
+  };
 
   this.getMore = function(url) {
     return $http({
