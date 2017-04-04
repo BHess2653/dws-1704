@@ -13,13 +13,25 @@
 </div>
 
 <div class="details ng-hide" ng-show="pokeInfo">
-  <p>ID:</p>
-  <p>Name:</p>
-  <p>Sprites:</p>
-  <p>Height:</p>
-  <p>Weight:</p>
+  <p>ID: {{pokeInfo.id}}</p><br>
+  <p>Name: {{pokeInfo.name}}</p><br>
+  <p>Sprites: <div>
+    <img ng-src="{{pokeInfo.sprites.back_default}}" alt="back"></img>
+    <img ng-src="{{pokeInfo.sprites.front_default}}" alt="front"></img>
+    <img ng-src="{{pokeInfo.sprites.back_shiny}}" alt="back"></img>
+    <img ng-src="{{pokeInfo.sprites.front_shiny}}" alt="front"></img>
+  </div></p><br>
+  <p>Height: {{pokeInfo.height}}</p><br>
+  <p>Weight: {{pokeInfo.weight}}</p>
 </div>
 
+<div class="pokemon" ng-repeat="mon in pokemon">
+  <p>{{mon.name}}</p>
+  <p><button ng-click="getMore(mon.url)">More Info</button></p>
+</div><br>
+
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
 <script src="js/index.js"></script>
 </html>
