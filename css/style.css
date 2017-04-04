@@ -1,0 +1,8 @@
+.ui-bar {
+    padding :5px 0px 5px 0px !important;
+    margin :5px 0px 5px 0px !important;
+}
+
+.ui-page .ui-content .ui-listview .ui-li-desc {
+    white-space : normal;
+}
