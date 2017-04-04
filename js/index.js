@@ -20,12 +20,12 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
     });
   };
 
-  $scope.advancePage = function() {
+  $scope.nextPage = function() {
       $scope.page++;
       $scope.getPokemon();
   }
 
-  $scope.retreatPage = function() {
+  $scope.previousPage = function() {
       if ($scope.page > 0) {
           $scope.page--;
           $scope.getPokemon();
@@ -41,7 +41,7 @@ angular.module('pokeApp').service('pokeService', function($http) {
   this.getPokemon = function(page) {
       return $http({
       method: 'GET',
-      url: pokeUrl + 'pokemon/?limit=20&offset=' + (page * 20)
+      url: pokeUrl + 'pokemon/?limit=5&offset=' + (page * 5)
       }).then(function(results) {
           return results.data.results;
       });
