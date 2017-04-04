@@ -6,9 +6,19 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Pokeapi</title>
 </head>
-<body>
+<body ng-controller="pokeController">
 
+<div class="center">
+  <h1>Pokemon Pokedex</h1>
+</div>
 
+<div class="details ng-hide" ng-show="pokeInfo">
+  <p>ID:</p>
+  <p>Name:</p>
+  <p>Sprites:</p>
+  <p>Height:</p>
+  <p>Weight:</p>
+</div>
 
 </body>
 <script src="js/index.js"></script>
