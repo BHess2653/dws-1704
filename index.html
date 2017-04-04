@@ -12,23 +12,36 @@
   <h1>Pokemon Pokedex</h1>
 </div>
 
+<div class="center">
+  <button class="prevbtn" ng-click="previousPage()">Previous</button>
+  <span class="pageSpan">Page {{page + 1}}</span>
+  <button class="nxtbtn" ng-click="nextPage()">Next</button>
+</div>
+<br>
+
 <div class="details ng-hide" ng-show="pokeInfo">
   <p>ID: {{pokeInfo.id}}</p><br>
   <p>Name: <span class="cap">{{pokeInfo.name}}</span></p><br>
+  <p>Base XP: {{pokeInfo.base_experience}}</p>
   <p>Sprites: <div>
     <img ng-src="{{pokeInfo.sprites.back_default}}" alt="back"></img>
     <img ng-src="{{pokeInfo.sprites.front_default}}" alt="front"></img>
     <img ng-src="{{pokeInfo.sprites.back_shiny}}" alt="back"></img>
     <img ng-src="{{pokeInfo.sprites.front_shiny}}" alt="front"></img>
   </div></p><br>
-  <p>Height: {{pokeInfo.height}}</p><br>
-  <p>Weight: {{pokeInfo.weight}}</p>
+  <p>Height: {{pokeInfo.height}} / Weight: {{pokeInfo.weight}}</p>
 </div>
 
 <div class="pokemon" ng-repeat="mon in pokemon">
   <p><span class="cap">{{mon.name}}</span></p>
   <p><button ng-click="getMore(mon.url)">More Info</button></p>
 </div><br>
+
+<div class="center">
+  <button class="prevbtn" ng-click="previousPage()">Previous</button>
+  <span class="pageSpan">Page {{page + 1}}</span>
+  <button class="nxtbtn" ng-click="nextPage()">Next</button>
+</div>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
