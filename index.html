@@ -6,6 +6,9 @@
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <title>Pokeapi</title>
 </head>
 <body ng-controller="pokeController">
@@ -47,8 +50,20 @@
                     <img ng-src="{{pokeInfo.sprites.front_default}}" alt="front"></img>
                     <img ng-src="{{pokeInfo.sprites.front_shiny}}" alt="front"></img>
                 </div></p><br>
-              <p>Base Experience: {{pokeInfo.base_experience}}</p>
-              <p>Height: {{pokeInfo.height}} / Weight: {{pokeInfo.weight}}</p>
+              <p><strong>Base Experience:</strong> {{pokeInfo.base_experience}}</p>
+              <p><strong>Height:</strong> {{pokeInfo.height}}</p>
+              <p><strong>Weight:</strong> {{pokeInfo.weight}}</p>
+              <p><strong>Type(s):</strong> {{pokeInfo.types[0].type.name}}, {{pokeInfo.types[1].type.name}}</p>
+              <p><strong>Abilitie(s):</strong> {{pokeInfo.abilities[0].ability.name}}, {{pokeInfo.abilities[1].ability.name}}</p>
+              <p><strong>Stat(s):</strong></p>
+              <ul>
+                  <li>{{pokeInfo.stats[5].stat.name}} {{pokeInfo.stats[5].base_stat}}</li>
+                  <li>{{pokeInfo.stats[4].stat.name}} {{pokeInfo.stats[4].base_stat}}</li>
+                  <li>{{pokeInfo.stats[3].stat.name}} {{pokeInfo.stats[3].base_stat}}</li>
+                  <li>{{pokeInfo.stats[2].stat.name}} {{pokeInfo.stats[2].base_stat}}</li>
+                  <li>{{pokeInfo.stats[1].stat.name}} {{pokeInfo.stats[1].base_stat}}</li>
+                  <li>{{pokeInfo.stats[0].stat.name}} {{pokeInfo.stats[0].base_stat}}</li>
+              </ul>
             </div>
           </div>
 
