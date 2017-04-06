@@ -21,11 +21,16 @@ h1 {
 }
 
 .pokemon {
+    width: 205px;
     float: left;
     margin: 8px;
     padding: 10px;
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.pokemon p {
+    text-align: -webkit-center;
 }
 
 .details {
