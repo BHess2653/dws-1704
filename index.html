@@ -3,6 +3,8 @@
 <html lang="en" ng-app="pokeApp">
 <head>
     <meta charset="UTF-8">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Pokeapi</title>
 </head>
@@ -11,34 +13,38 @@
 <div class="center">
   <h1>Pokemon Pokedex</h1>
 </div>
-
-<div class="center">
-  <button class="prevbtn" ng-click="previousPage()">Previous</button>
-  <span class="pageSpan">Page {{page + 1}}</span>
-  <button class="nxtbtn" ng-click="nextPage()">Next</button>
-</div>
+    
+<nav aria-label="..." class="center">
+  <ul class="pager">
+    <li class="previous" ng-click="previousPage()"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
+    <li><span class="pageSpan">Page {{page + 1}}</span></li>
+    <li class="next" ng-click="nextPage()"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>
+    
 <br>
+    
+<div id="pokemonList">
+    <div class="details ng-hide" ng-show="pokeInfo">
+      <p>ID: {{pokeInfo.id}}</p><br>
+      <p>Name: <span class="cap">{{pokeInfo.name}}</span></p><br>
+      <p>Base XP: {{pokeInfo.base_experience}}</p>
+      <p>Sprites: <div>
+        <img ng-src="{{pokeInfo.sprites.front_default}}" alt="front"></img>
+        <img ng-src="{{pokeInfo.sprites.front_shiny}}" alt="front"></img>
+      </div></p><br>
+      <p>Height: {{pokeInfo.height}} / Weight: {{pokeInfo.weight}}</p>
+    </div>
 
-<div class="details ng-hide" ng-show="pokeInfo">
-  <p>ID: {{pokeInfo.id}}</p><br>
-  <p>Name: <span class="cap">{{pokeInfo.name}}</span></p><br>
-  <p>Base XP: {{pokeInfo.base_experience}}</p>
-  <p>Sprites: <div>
-<!--    <img ng-src="{{pokeInfo.sprites.back_default}}" alt="back"></img>-->
-    <img ng-src="{{pokeInfo.sprites.front_default}}" alt="front"></img>
-<!--    <img ng-src="{{pokeInfo.sprites.back_shiny}}" alt="back"></img>-->
-    <img ng-src="{{pokeInfo.sprites.front_shiny}}" alt="front"></img>
-  </div></p><br>
-  <p>Height: {{pokeInfo.height}} / Weight: {{pokeInfo.weight}}</p>
+    <div class="pokemon" ng-repeat="mon in pokemon">
+      <p><span class="cap">{{mon.name}}</span></p>
+      <p><img ng-src="https://img.pokemondb.net/sprites/black-white/normal/{{mon.name}}.png" alt="pokemonImg"></img></p>
+      <p><button class="btn-primary" ng-click="getMore(mon.url)">More Info</button></p>
+    </div><br>
 </div>
-
-<div class="pokemon" ng-repeat="mon in pokemon">
-  <p><span class="cap">{{mon.name}}</span></p>
-  <p><img ng-src="https://img.pokemondb.net/sprites/black-white/normal/{{mon.name}}.png" alt="pokemonImg"></img></p>
-  <p><button ng-click="getMore(mon.url)">More Info</button></p>
-</div><br>
 
 </body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
 <script src="js/index.js"></script>
