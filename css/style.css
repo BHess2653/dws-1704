@@ -24,6 +24,7 @@ h1 {
 }
 
 .pokemon {
+    float: left;
     margin: 8px;
     padding: 10px;
     background: white;
@@ -44,6 +45,7 @@ h1 {
 }
 
 .center {
+    clear: both;
     display: flex;
     justify-content: center;
 }
