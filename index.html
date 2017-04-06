@@ -6,7 +6,7 @@
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <title>Pokeapi</title>
@@ -16,7 +16,7 @@
 <div class="center">
   <h1>Pokemon Pokedex</h1>
 </div>
-    
+
 <nav aria-label="..." class="center">
   <ul class="pager">
     <li class="previous" ng-click="previousPage()"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
@@ -24,11 +24,11 @@
     <li class="next" ng-click="nextPage()"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
-    
+
 <br>
-    
+
 <div id="pokemonList">
-    
+
     <!-- Modal -->
     <div class="modal fade bs-example-modal-lg-new" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 
@@ -43,7 +43,7 @@
               <h2 class="modal-title" id="gridSystemModalLabel">ID: {{pokeInfo.id}} - {{pokeInfo.name}}</h2>
           </div>
 
-          <!-- Modal Body -->  
+          <!-- Modal Body -->
           <div class="modal-body">
             <div class="body-message">
               <p>Sprites: <div>
@@ -53,7 +53,7 @@
               <p><strong>Base Experience:</strong> {{pokeInfo.base_experience}}</p>
               <p><strong>Height:</strong> {{pokeInfo.height}}</p>
               <p><strong>Weight:</strong> {{pokeInfo.weight}}</p>
-              <p><strong>Type(s):</strong> {{pokeInfo.types[0].type.name}}, {{pokeInfo.types[1].type.name}}</p>
+              <p><strong>Type(s):</strong> <span class="{{pokeInfo.types[0].type.name}}">{{pokeInfo.types[0].type.name}}</span>, <span class="{{pokeInfo.types[1].type.name}}">{{pokeInfo.types[1].type.name}}</span></p>
               <p><strong>Abilitie(s):</strong> {{pokeInfo.abilities[0].ability.name}}, {{pokeInfo.abilities[1].ability.name}}</p>
               <p><strong>Stat(s):</strong></p>
               <ul>
