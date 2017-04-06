@@ -1,5 +1,5 @@
 body {
-    background: #555;
+    background: limegreen;
     font-family: sans-serif;
 }
 
@@ -7,16 +7,12 @@ h1 {
   color: white;
 }
 
-.prevbtn {
-  margin-right: 5px;
-}
-
-.nxtbtn {
-  margin-left: 5px;
+#pokemonList, details {
+    margin: auto 35px;
 }
 
 .pageSpan {
-  color: white;
+  color: #000;
 }
 
 .cap {
@@ -32,11 +28,11 @@ h1 {
 }
 
 .details {
+    max-width: 95%;
     margin: 8px;
     margin-bottom: 12px;
     padding: 20px;
     background: white;
-    /*background: #eee;*/
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
