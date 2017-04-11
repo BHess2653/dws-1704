@@ -40,21 +40,22 @@
           <!-- Modal Header -->
           <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h2 class="modal-title" id="gridSystemModalLabel">ID: {{pokeInfo.id}} - {{pokeInfo.name}}</h2>
+              <h2 class="modal-title" id="gridSystemModalLabel"><strong>{{pokeInfo.name}}</strong></h2>
           </div>
 
           <!-- Modal Body -->
           <div class="modal-body">
             <div class="body-message">
-              <p>Sprites: <div>
-                    <img ng-src="{{pokeInfo.sprites.front_default}}" alt="front"></img>
-                    <img ng-src="{{pokeInfo.sprites.front_shiny}}" alt="front"></img>
+              <p><strong>Sprites:</strong> <div>
+                    <img ng-src="{{pokeInfo.sprites.front_default}}" onerror="this.src='pokemon/pokeball.png'" alt="front"></img>
+                    <img ng-src="{{pokeInfo.sprites.front_shiny}}" onerror="this.src='pokemon/pokeball.png'" alt="front-shiny"></img>
                 </div></p><br>
+              <p><strong>ID:</strong> {{pokeInfo.id}}</p>
               <p><strong>Base Experience:</strong> {{pokeInfo.base_experience}}</p>
               <p><strong>Height:</strong> {{pokeInfo.height}}</p>
               <p><strong>Weight:</strong> {{pokeInfo.weight}}</p>
-              <p><strong>Type(s):</strong> <span class="{{pokeInfo.types[0].type.name}}">{{pokeInfo.types[0].type.name}}</span>, <span class="{{pokeInfo.types[1].type.name}}">{{pokeInfo.types[1].type.name}}</span></p>
-              <p><strong>Abilitie(s):</strong> {{pokeInfo.abilities[0].ability.name}}, {{pokeInfo.abilities[1].ability.name}}</p>
+          <p><strong>Type(s):</strong> <span class="{{pokeInfo.types[0].type.name}}">{{pokeInfo.types[0].type.name}}</span> <span class="{{pokeInfo.types[1].type.name}}">{{pokeInfo.types[1].type.name}}</span></p>
+          <p><strong>Abilitie(s):</strong> <span id="comma">{{pokeInfo.abilities[0].ability.name}}</span><span id="comma">{{pokeInfo.abilities[1].ability.name}}</span></p>
               <p><strong>Stat(s):</strong></p>
               <ul>
                   <li>{{pokeInfo.stats[5].stat.name}} {{pokeInfo.stats[5].base_stat}}</li>
@@ -80,7 +81,7 @@
     <!-- Pokemon blocks -->
     <div class="pokemon" ng-repeat="mon in pokemon">
       <p><span class="cap"><strong>{{mon.name}}</strong></span></p>
-      <p><img ng-src="https://img.pokemondb.net/sprites/black-white/normal/{{mon.name}}.png" alt="pokemonImg"></img></p>
+      <p><img ng-src="https://img.pokemondb.net/sprites/black-white/normal/{{mon.name}}.png" onerror="this.src='pokemon/pokeball.png'" alt="{{mon.name}}Img"></img></p>
       <!-- Button trigger modal -->
       <p><button type="button" class="btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg-new" ng-click="getMore(mon.url)">More Info</button></p>
     </div><br>
