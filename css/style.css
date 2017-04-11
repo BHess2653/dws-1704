@@ -8,6 +8,10 @@ h1 {
   font-family: 'Press Start 2P', cursive;
 }
 
+h2 {
+  text-transform: capitalize
+}
+
 #pokemonList, details {
     margin: auto 35px;
 }
@@ -54,9 +58,17 @@ h1 {
 }
 
 
+/*Comma stuff*/
+#comma:empty {
+  display: none;
+}
+
+#comma:not(:nth-child(2)):before {
+  content: ", ";
+}
+
 
 /*Types*/
-
 .normal {
     color: #fbfbfb;
     border-top: 2px solid #d8d8d0;
