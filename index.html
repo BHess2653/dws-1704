@@ -9,7 +9,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <title>Pokeapi</title>
+    <title>Pokeapi App</title>
 </head>
 <body ng-controller="pokeController">
 
@@ -18,11 +18,14 @@
 </div>
 
 <nav aria-label="..." class="center">
+<!--
   <ul class="pager">
     <li class="previous" ng-click="previousPage()"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
     <li><span class="pageSpan">Page {{page + 1}}</span></li>
     <li class="next" ng-click="nextPage()"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
-  </ul>
+  </ul><br>
+-->
+  <input type="text" placeholder="pokemon name" ng-model="pokeName">
 </nav>
 
 <br>
@@ -47,8 +50,8 @@
           <div class="modal-body">
             <div class="body-message">
               <p><strong>Sprites:</strong> <div>
-                    <img ng-src="{{pokeInfo.sprites.front_default}}" onerror="this.src='pokemon/pokeball.png'" alt="front"></img>
-                    <img ng-src="{{pokeInfo.sprites.front_shiny}}" onerror="this.src='pokemon/pokeball.png'" alt="front-shiny"></img>
+                    <img id="spriteImg" ng-src="{{pokeInfo.sprites.front_default}}" onerror="this.src='pokemon/pokeball.png'" alt="front"></img>
+                    <img id="spriteImg" ng-src="{{pokeInfo.sprites.front_shiny}}" onerror="this.src='pokemon/pokeball.png'" alt="front-shiny"></img>
                 </div></p><br>
               <p><strong>ID:</strong> {{pokeInfo.id}}</p>
               <p><strong>Base Experience:</strong> {{pokeInfo.base_experience}}</p>
@@ -79,7 +82,7 @@
     </div>
 
     <!-- Pokemon blocks -->
-    <div class="pokemon" ng-repeat="mon in pokemon">
+    <div class="pokemon" ng-repeat="mon in pokemon| filter:{name:pokeName}">
       <p><span class="cap"><strong>{{mon.name}}</strong></span></p>
       <p><img ng-src="https://img.pokemondb.net/sprites/black-white/normal/{{mon.name}}.png" onerror="this.src='pokemon/pokeball.png'" alt="{{mon.name}}Img"></img></p>
       <!-- Button trigger modal -->
