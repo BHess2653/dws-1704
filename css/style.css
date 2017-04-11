@@ -57,6 +57,17 @@ h2 {
     justify-content: center;
 }
 
+input {
+    margin: 21px 0;
+    height: 33px;
+    width: 400px;
+}
+
+#spriteImg {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    background: rgba(180, 60, 60, 0.5);
+}
+
 
 /*Comma stuff*/
 #comma:empty {
