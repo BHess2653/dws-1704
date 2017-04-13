@@ -42,7 +42,7 @@ angular.module('pokeApp').service('pokeService', function($http) {
   this.getPokemon = function(page) {
       return $http({
       method: 'GET',
-      url: pokeUrl + 'pokemon/?limit=10090&offset=' + (page * 10090)
+      url: pokeUrl + 'pokemon/?limit=40&offset=' + (page * 40) /*10090 max*/
       }).then(function(results) {
           return results.data.results;
       });
