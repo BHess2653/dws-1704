@@ -11,6 +11,16 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
       });
   };
 
+    
+   $scope.getTip = function(name){
+       switch(name){
+           case "poison":
+               return "don't eat this"
+               break;
+           case "etc":
+       }
+   };
+    
   $scope.getPokemon();
 
   $scope.getMore = function(url) {

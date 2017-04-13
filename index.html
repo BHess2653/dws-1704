@@ -55,7 +55,7 @@
               <p><strong>Base Experience:</strong> {{pokeInfo.base_experience}}</p>
               <p><strong>Height:</strong> {{pokeInfo.height}}</p>
               <p><strong>Weight:</strong> {{pokeInfo.weight}}</p>
-              <p><strong>Types:</strong> <span class="{{pokeInfo.types[0].type.name}}" data-toggle="tooltip" data-placement="bottom" title="Tooltip1">{{pokeInfo.types[0].type.name}}</span> <span class="{{pokeInfo.types[1].type.name}}" data-toggle="tooltip" data-placement="bottom" title="Tooltip2">{{pokeInfo.types[1].type.name}}</span></p>
+              <p><strong>Types:</strong> <span class="{{pokeInfo.types[0].type.name}}" data-toggle="tooltip" data-tip="{{getTip(pokeInfo.types[0].type.name)}}" data-placement="bottom" title="Tooltip1">{{pokeInfo.types[0].type.name}}</span> <span class="{{pokeInfo.types[1].type.name}}" data-toggle="tooltip" data-placement="bottom" title="Tooltip2">{{pokeInfo.types[1].type.name}}</span></p>
               <p><strong>Abilities:</strong> <span id="comma">{{pokeInfo.abilities[0].ability.name}}</span><span id="comma">{{pokeInfo.abilities[1].ability.name}}</span></p>
               <p><strong>Stats:</strong></p>
               <ul>
@@ -91,9 +91,9 @@
 </div>
 
 </body>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
 <script src="js/index.js"></script>
 </html>
