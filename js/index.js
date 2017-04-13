@@ -58,3 +58,7 @@ angular.module('pokeApp').service('pokeService', function($http) {
   };
 
 });
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
