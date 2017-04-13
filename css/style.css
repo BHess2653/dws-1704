@@ -31,8 +31,8 @@ h2 {
 
 .fade {
     opacity: 0;
-    -webkit-transition: opacity 1s linear;
-    transition: opacity 1s linear;
+    -webkit-transition: opacity 1.5s linear;
+    transition: opacity 1.5s linear;
 }
 
 .pokemon {
