@@ -58,9 +58,10 @@ h2 {
 }
 
 input {
+    max-width: 60%;
     margin: 21px 0;
     height: 33px;
-    width: 400px;
+    width: 600px;
 }
 
 #spriteImg {
