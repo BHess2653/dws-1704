@@ -12,6 +12,18 @@ h2 {
   text-transform: capitalize
 }
 
+ul {
+    text-transform: capitalize
+}
+
+li {
+    max-width: 25%;
+}
+
+meter {
+    float: right;
+}
+
 #pokemonList, details {
     margin: auto 35px;
 }
