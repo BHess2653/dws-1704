@@ -14,6 +14,7 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
   $scope.getPokemon();
 
   $scope.getMore = function(url) {
+      $scope.pokeInfo = null;
     pokeService.getMore(url).then(function(results) {
       $scope.pokeInfo = results;
       console.dir($scope.pokeInfo);
@@ -41,7 +42,7 @@ angular.module('pokeApp').service('pokeService', function($http) {
   this.getPokemon = function(page) {
       return $http({
       method: 'GET',
-      url: pokeUrl + 'pokemon/?limit=649&offset=' + (page * 649)
+      url: pokeUrl + 'pokemon/?limit=10090&offset=' + (page * 10090)
       }).then(function(results) {
           return results.data.results;
       });
