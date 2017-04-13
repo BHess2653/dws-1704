@@ -24,6 +24,17 @@ h2 {
   text-transform: capitalize;
 }
 
+.fa {
+    font-size: 20px;
+    float: right;
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+}
+
 .pokemon {
 /*    height: 240px;*/
     width: 205px;
@@ -32,6 +43,11 @@ h2 {
     padding: 10px;
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.pokemon:hover {
+    color: #fbfbfb;
+    background-color: #999999;
 }
 
 .pokemon p {
@@ -64,9 +80,16 @@ input {
     width: 600px;
 }
 
+#pokeBlock {
+        image-rendering: pixelated;
+        width: 160px;
+}
+
 #spriteImg {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
-    background: rgba(180, 60, 60, 0.5);
+    image-rendering: pixelated;
+    height: 200px;
+    background-image: url("http://i.imgur.com/jODnCBJ.png");
 }
 
 
