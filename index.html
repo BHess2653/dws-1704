@@ -25,7 +25,7 @@
     <li class="next" ng-click="nextPage()"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
   </ul><br>
 -->
-  <input type="text" placeholder="pokemon name" ng-model="pokeName">
+  <input type="text" placeholder="Search for pokemon" ng-model="pokeName">
 </nav>
 
 <br>
@@ -34,7 +34,7 @@
 
     <!-- Modal -->
     <div class="modal fade bs-example-modal-lg-new" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-
+        <div style="height:100px;width:100px;background:red;margin:auto;" ng-hide="pokeInfo">Loading...</div>
       <div class="modal-dialog modal-lg">
 
         <!-- Modal Content: begins -->
@@ -57,8 +57,8 @@
               <p><strong>Base Experience:</strong> {{pokeInfo.base_experience}}</p>
               <p><strong>Height:</strong> {{pokeInfo.height}}</p>
               <p><strong>Weight:</strong> {{pokeInfo.weight}}</p>
-          <p><strong>Type(s):</strong> <span class="{{pokeInfo.types[0].type.name}}">{{pokeInfo.types[0].type.name}}</span> <span class="{{pokeInfo.types[1].type.name}}">{{pokeInfo.types[1].type.name}}</span></p>
-          <p><strong>Abilitie(s):</strong> <span id="comma">{{pokeInfo.abilities[0].ability.name}}</span><span id="comma">{{pokeInfo.abilities[1].ability.name}}</span></p>
+              <p><strong>Type(s):</strong> <span class="{{pokeInfo.types[0].type.name}}">{{pokeInfo.types[0].type.name}}</span> <span class="{{pokeInfo.types[1].type.name}}">{{pokeInfo.types[1].type.name}}</span></p>
+              <p><strong>Abilitie(s):</strong> <span id="comma">{{pokeInfo.abilities[0].ability.name}}</span><span id="comma">{{pokeInfo.abilities[1].ability.name}}</span></p>
               <p><strong>Stat(s):</strong></p>
               <ul>
                   <li>{{pokeInfo.stats[5].stat.name}} {{pokeInfo.stats[5].base_stat}}</li>
