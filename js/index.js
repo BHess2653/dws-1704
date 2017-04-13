@@ -11,7 +11,7 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
       });
   };
 
-    
+
    $scope.getTip = function(name){
        switch(name){
            case "poison":
@@ -20,7 +20,7 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
            case "etc":
        }
    };
-    
+
   $scope.getPokemon();
 
   $scope.getMore = function(url) {
@@ -47,7 +47,7 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
 
 angular.module('pokeApp').service('pokeService', function($http) {
 
-  var pokeUrl = 'http://pokeapi.co/api/v2/';
+  var pokeUrl = '//pokeapi.co/api/v2/';
 
   this.getPokemon = function(page) {
       return $http({
