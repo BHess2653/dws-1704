@@ -13,11 +13,17 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
 
 
    $scope.getTip = function(name){
+       console.log(name);
        switch(name){
            case "poison":
                return "don't eat this"
                break;
            case "etc":
+               return "boop"
+               break;
+           default:
+               return "fire"
+               break;
        }
    };
 
