@@ -130,7 +130,7 @@ input {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
     image-rendering: pixelated;
     height: 200px;
-    background-image: url('/pokemon/background.png');
+    background-image: url('/pokemon/background.png'), url('http://i.imgur.com/jODnCBJ.png');
 }
 
 
