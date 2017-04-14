@@ -1,3 +1,18 @@
+/*
+.div-wrapper {
+    position: relative;
+    height: 125px;
+    width: 300px;
+}
+
+.div-wrapper img {
+    position: absolute;
+    left: 25px;
+    bottom: 0px;
+}
+*/
+
+
 body {
     background: #b33c3c;
     font-family: sans-serif;
@@ -17,7 +32,7 @@ ul {
 }
 
 li {
-    max-width: 25%;
+    max-width: 35%;
 }
 
 a:hover {
@@ -29,11 +44,13 @@ meter {
     float: right;
 }
 
+/*
 #box {
     width: 160px;
     height: 160px;
-    background-image: url("pokemon/{{mon.name}}.gif");
+    background-image: url("/pokemon/{{mon.name}}.gif");
 }
+*/
 
 #pokemonList, details {
     margin: auto 35px;
@@ -59,7 +76,7 @@ meter {
 }
 
 .pokemon {
-/*    height: 240px;*/
+/*    height: 222px;*/
     width: 205px;
     float: left;
     margin: 8px;
@@ -70,7 +87,7 @@ meter {
 
 .pokemon:hover {
     color: #fbfbfb;
-    background-color: #999999;
+    background-color: #cccccc;
 }
 
 .pokemon p {
@@ -103,7 +120,8 @@ input {
     width: 600px;
 }
 
-#pokeBlock {
+.pokeBlock {
+/*        border-bottom: 2px black solid;*/
         image-rendering: pixelated;
         width: 160px;
 }
@@ -112,7 +130,7 @@ input {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
     image-rendering: pixelated;
     height: 200px;
-    background-image: url("http://i.imgur.com/jODnCBJ.png");
+    background-image: url('/pokemon/background.png');
 }
 
 
