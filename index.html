@@ -82,7 +82,7 @@
     <!-- Pokemon blocks -->
     <div class="pokemon" ng-repeat="mon in pokemon| filter:{name:pokeName}">
       <p><span class="cap"><strong>{{mon.name}}</strong></span></p>
-        <p><div class="div-wrapper"><img class="pokeBlock" ng-src="https://img.pokemondb.net/sprites/black-white/normal/{{mon.name}}.png" onerror="this.src='pokemon/pokeball.png'" alt="{{mon.name}}Img"></img></div></p>
+        <p><div class="div-wrapper"><img class="pokeBlock" ng-src="pokemon/{{mon.name}}.gif" onerror="this.src='pokemon/pokeball.png'" alt="{{mon.name}}Img"></img></div></p>
       <p><a class="fa fa-info-circle" aria-hidden="true" data-toggle="modal" data-target=".bs-example-modal-lg-new" ng-click="getMore(mon.url)"></a></p>
       <!-- Button trigger modal -->
 <!--      <p><button type="button" class="btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg-new" ng-click="getMore(mon.url)">More Info</button></p>-->
