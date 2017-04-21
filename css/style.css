@@ -57,6 +57,7 @@ meter {
 }
 
 .fa {
+    color: #fec930;
     font-size: 20px;
     float: right;
 }
@@ -125,6 +126,17 @@ input {
     background-image: url('/pokemon/background.png'), url('http://i.imgur.com/jODnCBJ.png');
 }
 
+.btn-primary {
+    color: #336fb1;
+    background-color: #fec930;
+    border-color: #fec930;
+}
+
+.btn-primary:hover {
+    color: #336fb1;
+    background-color: #c69f26;
+    border-color: #c69f26;
+}
 
 /*Comma stuff*/
 #comma:empty {
