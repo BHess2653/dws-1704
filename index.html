@@ -59,12 +59,12 @@
               <p><strong>Abilities:</strong> <span id="comma">{{pokeInfo.abilities[0].ability.name}}</span><span id="comma">{{pokeInfo.abilities[1].ability.name}}</span></p>
               <p><strong>Stats:</strong></p>
               <ul>
-                  <li>{{pokeInfo.stats[5].stat.name}} = {{pokeInfo.stats[5].base_stat}}<meter value="{{pokeInfo.stats[5].base_stat}}" min="0" high="100" max="200"></meter></li>
-                  <li>{{pokeInfo.stats[4].stat.name}} = {{pokeInfo.stats[4].base_stat}}<meter value="{{pokeInfo.stats[4].base_stat}}" min="0" high="100" max="200"></meter></li>
-                  <li>{{pokeInfo.stats[3].stat.name}} = {{pokeInfo.stats[3].base_stat}}<meter value="{{pokeInfo.stats[3].base_stat}}" min="0" high="100" max="200"></meter></li>
-                  <li>{{pokeInfo.stats[2].stat.name}} = {{pokeInfo.stats[2].base_stat}}<meter value="{{pokeInfo.stats[2].base_stat}}" min="0" high="100" max="200"></meter></li>
-                  <li>{{pokeInfo.stats[1].stat.name}} = {{pokeInfo.stats[1].base_stat}}<meter value="{{pokeInfo.stats[1].base_stat}}" min="0" high="100" max="200"></meter></li>
-                  <li>{{pokeInfo.stats[0].stat.name}} = {{pokeInfo.stats[0].base_stat}}<meter value="{{pokeInfo.stats[0].base_stat}}" min="0" high="100" max="200"></meter></li>
+                  <li>{{pokeInfo.stats[5].base_stat}} {{pokeInfo.stats[5].stat.name}}<meter value="{{pokeInfo.stats[5].base_stat}}" min="0" high="100" max="200"></meter></li>
+                  <li>{{pokeInfo.stats[4].base_stat}} {{pokeInfo.stats[4].stat.name}}<meter value="{{pokeInfo.stats[4].base_stat}}" min="0" high="100" max="200"></meter></li>
+                  <li>{{pokeInfo.stats[3].base_stat}} {{pokeInfo.stats[3].stat.name}}<meter value="{{pokeInfo.stats[3].base_stat}}" min="0" high="100" max="200"></meter></li>
+                  <li>{{pokeInfo.stats[2].base_stat}} {{pokeInfo.stats[2].stat.name}}<meter value="{{pokeInfo.stats[2].base_stat}}" min="0" high="100" max="200"></meter></li>
+                  <li>{{pokeInfo.stats[1].base_stat}} {{pokeInfo.stats[1].stat.name}}<meter value="{{pokeInfo.stats[1].base_stat}}" min="0" high="100" max="200"></meter></li>
+                  <li>{{pokeInfo.stats[0].base_stat}} {{pokeInfo.stats[0].stat.name}}<meter value="{{pokeInfo.stats[0].base_stat}}" min="0" high="100" max="200"></meter></li>
               </ul>
             </div>
           </div>
@@ -81,12 +81,11 @@
 
     <!-- Pokemon blocks -->
     <div class="pokemon" ng-repeat="mon in pokemon| filter:{name:pokeName}">
+      <a aria-hidden="true" data-toggle="modal" data-target=".bs-example-modal-lg-new" ng-click="getMore(mon.url)">
       <p><span class="cap"><strong>{{mon.name}}</strong></span></p>
         <p><div class="div-wrapper"><img class="pokeBlock" ng-src="pokemon/{{mon.name}}.gif" onerror="this.src='pokemon/pokeball.png'" alt="{{mon.name}}Img"></img></div></p>
       <p><a class="fa fa-info-circle" aria-hidden="true" data-toggle="modal" data-target=".bs-example-modal-lg-new" ng-click="getMore(mon.url)"></a></p>
-      <!-- Button trigger modal -->
-<!--      <p><button type="button" class="btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg-new" ng-click="getMore(mon.url)">More Info</button></p>-->
-    </div><br>
+    </div></a><br>
 
 </div>
 
