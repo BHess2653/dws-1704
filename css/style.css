@@ -1,13 +1,15 @@
 .div-wrapper {
-    position: relative;
-    height: 125px;
-    width: 300px;
+    width:500px;
+    height:200px;
+    text-align:center;
+    vertical-align:middle;
+    display:table-cell;
+/*    background-color:#ccc;*/
 }
 
 .div-wrapper img {
-    position: absolute;
-    left: 25px;
-    bottom: 0px;
+    display:block;
+    margin: 0 auto;
 }
 
 
@@ -41,14 +43,6 @@ a:hover {
 meter {
     float: right;
 }
-
-/*
-#box {
-    width: 160px;
-    height: 160px;
-    background-image: url("/pokemon/{{mon.name}}.gif");
-}
-*/
 
 #pokemonList, details {
     margin: auto 35px;
@@ -119,7 +113,7 @@ input {
 }
 
 .pokeBlock {
-        border-bottom: 2px black solid;
+/*        border-bottom: 2px black solid;*/
         image-rendering: pixelated;
 /*        width: 160px;*/
 }
