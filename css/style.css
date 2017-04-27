@@ -289,10 +289,56 @@ input {
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-/*Media Queries*/
+/*Media Queries*/ /*Might change later*/
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 @media (max-width: 669px) {
   input {
     width: 250px;
+  }
+}
+
+@media (max-width: 1400px) {
+  #pokemonList, #details {
+    margin: auto 160px;
+  }
+}
+
+@media (max-width: 995px) {
+  #pokemonList, #details {
+    margin: auto 85px;
+  }
+}
+
+@media (max-width: 1383px) {
+  #pokemonList, #details {
+    margin: auto 50px;
+  }
+}
+
+@media (max-width: 690px) {
+  input {
+    width: 60px;
+  }
+  #pokemonList, #details {
+    margin: auto 32px;
+  }
+}
+
+@media (max-width: 597px) {
+  input {
+    width: 130px;
+  }
+  #pokemonList, #details {
+    margin: auto 0px;
+  }
+}
+
+
+@media (max-width: 515px) {
+  input {
+    width: 130px;
+  }
+  #pokemonList, #details {
+    margin: auto 70px;
   }
 }
