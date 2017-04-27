@@ -151,7 +151,7 @@ input {
 #logo {
     padding: 195px 312px 0 0;
     overflow: hidden;
-    background-image: url("/pokemon/pokemon-logo.png");
+    background-image: url('/pokemon/pokemon-logo.png'), url('http://i.imgur.com/8Huwink.png');
     background-repeat: no-repeat;
     height: 0px !important;
 }
