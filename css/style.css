@@ -48,6 +48,7 @@ meter {
     color: #fec930;
     font-size: 20px;
     float: right;
+    cursor: pointer;
 }
 
 .fade {
@@ -143,6 +144,7 @@ input {
 .div-wrapper img {
     display:block;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
