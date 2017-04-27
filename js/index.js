@@ -89,10 +89,3 @@ function preloadImg(url) {
     var img = new Image();
     img.src = "pokemon/{{mon.name}}.gif";
 }
-
-/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-/* ToolTip stuff */
-/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
