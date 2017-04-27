@@ -1,5 +1,9 @@
 angular.module('pokeApp', []);
 
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* PokeController */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 angular.module('pokeApp').controller('pokeController', function($scope, pokeService) {
 
   $scope.page = 0;
@@ -11,7 +15,7 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
       });
   };
 
-
+    /* ToolTip */
    $scope.getTip = function(name){
        console.log(name);
        switch(name){
@@ -25,7 +29,7 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
                return "fire"
                break;
        }
-   };
+   }; /* ToolTip End */
 
   $scope.getPokemon();
 
@@ -51,6 +55,9 @@ angular.module('pokeApp').controller('pokeController', function($scope, pokeServ
 
 });
 
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* PokeService */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 angular.module('pokeApp').service('pokeService', function($http) {
 
   var pokeUrl = '//pokeapi.co/api/v2/';
@@ -75,6 +82,17 @@ angular.module('pokeApp').service('pokeService', function($http) {
 
 });
 
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* PreloadImg on Page */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+function preloadImg(url) {
+    var img = new Image();
+    img.src = "pokemon/{{mon.name}}.gif";
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* ToolTip stuff */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
