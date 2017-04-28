@@ -116,6 +116,7 @@ input {
     padding: 10px;
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    cursor: pointer;
 }
 
 #pokemon:hover {
@@ -137,7 +138,8 @@ input {
     text-align:center;
     vertical-align:middle;
     display:table-cell;
-/*    background-image: url('http://i.imgur.com/jODnCBJ.png');*/
+    background-image: url('/pokemon/pokebg.png'), url('http://i.imgur.com/fPzafxM.png');
+    background-size: contain;
 /*    background-color:#ccc;*/
 }
 
@@ -317,7 +319,7 @@ input {
 
 @media (max-width: 690px) {
   input {
-    width: 60px;
+    width: 190px;
   }
   #pokemonList, #details {
     margin: auto 32px;
