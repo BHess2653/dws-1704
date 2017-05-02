@@ -77,7 +77,7 @@ input {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
     image-rendering: pixelated;
     height: 200px;
-    background-image: url('/pokemon/background.png'), url('http://i.imgur.com/jODnCBJ.png');
+    background-image: url('/pokemon/background.png'), url('//i.imgur.com/jODnCBJ.png');
 }
 
 .btn-primary {
@@ -138,7 +138,7 @@ input {
     text-align:center;
     vertical-align:middle;
     display:table-cell;
-    background-image: url('/pokemon/pokebg.png'), url('http://i.imgur.com/fPzafxM.png');
+    background-image: url('/pokemon/pokebg.png'), url('//i.imgur.com/fPzafxM.png');
     background-size: contain;
 /*    background-color:#ccc;*/
 }
@@ -155,7 +155,7 @@ input {
 #logo {
     padding: 195px 312px 0 0;
     overflow: hidden;
-    background-image: url('/pokemon/pokemon-logo.png'), url('http://i.imgur.com/8Huwink.png');
+    background-image: url('/pokemon/pokemon-logo.png'), url('//i.imgur.com/8Huwink.png');
     background-repeat: no-repeat;
     height: 0px !important;
 }
